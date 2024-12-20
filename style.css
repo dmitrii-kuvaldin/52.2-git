@@ -1,4 +1,10 @@
-body {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
@@ -25,7 +31,7 @@ body {
   }
 
   header a:hover {
-    color: #ffd700;
+    color: #5e7cd1;
   }
 
   section {
@@ -37,6 +43,13 @@ body {
   section label {
     margin-right: 10px;
     font-weight: bold;
+  }
+
+  section input {
+    padding: 5px 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
   }
 
   section button {
@@ -75,4 +88,31 @@ body {
     background-color: #333;
     color: white;
   }
-пше
+
+  /* Адаптивность */
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    section button {
+      width: 100%;
+      margin: 10px 0;
+    }
+  }
+
+  @media (max-width: 480px) {
+    header a {
+      font-size: 1rem;
+    }
+
+    section label,
+    section input {
+      font-size: 1rem;
+    }
+  }
